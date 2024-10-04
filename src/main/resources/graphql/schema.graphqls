@@ -1,0 +1,19 @@
+type Customer{
+    id:ID!
+    firstName:String!
+    lastName:String!
+}
+
+type Query{
+    customers:[Customer]!
+    customerById(is:ID):Customer
+}
+
+input CustomerInput{
+    firstName: String!
+    lastName: String!
+}
+
+type Mutation{
+    addCustomer(input: CustomerInput):Customer
+}
